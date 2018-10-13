@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import Axios from 'axios';
 
-class Movie extends Component {  
+class Movie extends Component {
     render() {
-      return (
+        const movie=this.props.individualMovie;
+    return (
         <div className="App">
-        <div className="Background">
-           
-             <div className="Movies">
-               <h3>Title: </h3>
-               <h3>Release Date: {this.props.individualMovie.release_date}</h3>
-               <h3>Rating: {this.props.individualMovie.vote_average}</h3>
-               <h3>Budget: {this.props.individualMovie.budget}</h3>
-               <button onClick={this.props.goBack}>Go Back</button>
+            <div className="backdrop" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original" + this.props.individualMovie.backdrop_path+")"}}>
+                <div className="movieBackground">
+                    <div className="Movies">
+                        <h2>{movie.title}</h2>
+                        <h3>Budget: ${movie.budget}</h3>
+                        <h3>Release Date: {movie.release_date}</h3>
+                        <p>Overview: {movie.overview}</p>
+                        <p>Rating: {movie.vote_average}</p>
+                    </div>
+                    <button onClick={this.props.goBack}>Back</button>
+                </div>
             </div>
-           
-          </div> 
         </div>
-      );
-    }
-  }
-  
-  export default Movie;
+        );
+        }
+        }
+    export default Movie;
