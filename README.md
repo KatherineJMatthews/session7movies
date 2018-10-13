@@ -1,3 +1,5 @@
+//Project created in collaboration with Michael Huffman, Cheyenne Lenox, and Robert Wachter. Searchable movie database using the moviedb api.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
